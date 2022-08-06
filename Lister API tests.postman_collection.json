@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "5fb4e254-2875-4780-aa21-ec41573543bf",
+		"name": "Lister API tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5186/users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJuYmYiOjE2NTk4MTUzOTMsImV4cCI6MTY1OTgxNTk5MywiaWF0IjoxNjU5ODE1MzkzfQ.WSrE1QAZpNGyLZm_Jaw2GfKIHHMGLA5DJdb3oKv30ZU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5186/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5186",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5186/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserName\": \"admin\",\r\n    \"FirstName\": \"\",\r\n    \"LastName\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5186/users/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5186",
+					"path": [
+						"users",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
